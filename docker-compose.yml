@@ -40,7 +40,6 @@ services:
     restart: 'no'
     image: docker-wordpress-with-gulp/alloy-sage:dev
     working_dir: /var/www/html/wp-content/themes/alloy-sage
-    command: 'npm install -g gulp bower && npm install && bower install && gulp && gulp watch'
     command: >
       bash -c "npm install -g gulp bower
       && npm install --allow-root
