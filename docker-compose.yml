@@ -38,6 +38,12 @@ services:
   node:
     build: .
     restart: 'no'
+    working_dir: /var/www/html/wp-content/themes/alloy-sage
+    command: >
+      bash -c "npm install --allow-root
+      && bower install --allow-root
+      && gulp
+      && gulp watch"
     volumes:
       - ./alloy-sage:/var/www/html/wp-content/themes/alloy-sage
     depends_on:
