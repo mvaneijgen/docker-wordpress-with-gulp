@@ -6,6 +6,3 @@ RUN npm install gulp
 RUN npm install bower
 
 RUN npm install
-
-RUN ls && \
-    gulp

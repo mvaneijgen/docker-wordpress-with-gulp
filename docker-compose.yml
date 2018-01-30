@@ -38,8 +38,11 @@ services:
   node:
     build: .
     restart: 'no'
-    image: node:slim
-    working_dir: /var/www/html/wp-content/themes/alloy-sage
+    image: yourdockername/alloy-sage:dev
+    working_dir: /some/path/in/container
+    command: 'gulp'
+    volumes:
+      - ./alloy-sage:/var/www/html/wp-content/themes/alloy-sage
     depends_on:
       - wordpress
 volumes:
