@@ -1,0 +1,206 @@
+// Search form
+.search-form {
+  @extend .form-inline;
+}
+.search-form label {
+  font-weight: normal;
+  @extend .form-group;
+}
+.search-form .search-field {
+  @extend .form-control;
+}
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+input {
+    border: 0;
+    border-bottom: 2px solid;
+    width: 100%;
+}
+/* Gravity forms --------------*/
+.gform_wrapper {
+  margin-bottom: 45px;
+
+  .gform_previous_button {
+    border: 0 !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    min-width: auto !important;
+    text-decoration: underline;
+    background-image: none;
+}
+
+  .ginput_complex > * {
+    width: 49%;
+    display: inline-block;
+  }
+  .ginput_container_name {
+    .name_prefix_select {
+        width: 12% !important;
+    }
+    .name_first,
+    .name_last {
+        width: 43% !important;
+    }
+  }
+  .gform_page_fields > ul > li {
+  }
+  .gform_button,
+  .gform_next_button {
+    float: right;
+  }
+  .gf_progressbar_title {
+    display: none;
+  }
+  .gf_progressbar {
+    background: rgba($brand-grey, .2);
+    margin: 15px 0;
+  }
+  .gf_progressbar_percentage {
+    background: $brand-secondary;
+    padding: 5px 15px;
+    color: $brand-dark;
+    font-size: 10px;
+    /* height: 20px; */
+    line-height: 1em;
+
+  }
+  .gform_save_link {
+    font-size: 14px;
+  }
+  .gform_previous_button {
+    float: none;
+    background-color: transparent;
+    font-family: "Open Sans";
+    text-transform: none;
+    font-size: 14px;
+    // position: absolute;
+    // right: 120px;
+    // top: 6px;
+    color: $brand-dark;
+    border-bottom: 2px solid;
+    padding: 0;
+    padding-bottom: 5px;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+  .gform_page_footer {
+    position: relative;
+  }
+  .gfield_checkbox > * {
+    display: inline-block;
+    margin-right: 15px;
+    line-height: 1em;
+    margin-bottom: 0;
+  }
+  .gfield_checkbox li label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-left: 6px;
+  }
+  li {
+    color: $brand-dark;
+  }
+  .gform_button{
+    margin-top: 15px;
+  }
+  .validation_message {
+    background-color: $brand-primary;
+    color: $brand-light;
+    padding: 5px 10px;
+  }
+  .validation_error {
+    background-color: $brand-dark;
+    color: $brand-light;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  textarea {
+    height: 155px;
+  }
+
+  li.gfield{
+    .gfield_label_before_complex{
+      display: none;
+    }
+    input,
+    label{
+      @extend h6;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    label{
+      transform: translateY(43px);
+      transition: transform;
+      transition-duration: .3s;
+      transition-timing-function: ease;
+      color: rgba($brand-dark, .4);
+      margin-left: 10px;
+    }
+    label.selectedInput {
+      transform: translateY(0px);
+      color: rgba($brand-dark, .6);
+    }
+  }
+  .name_prefix_select label,
+  .no-label-transform label{
+    transform: translateY(0px) !important;
+    color: rgba($brand-dark, .6) !important;
+  }
+  .textarea {
+      width: 100%;
+  }
+  .gf_clear.gf_clear_complex {
+      display: none;
+  }
+
+}
+.ui-datepicker {
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0px 2px 14px #212;
+  left: 50% !important;
+  transform: translateX(-50%);
+  display: none;
+  a {
+    border-bottom: none;
+  }
+  .ui-datepicker-header{
+    margin-bottom: 10px;
+
+    .ui-corner-all{
+      @extend h6;
+      margin-bottom: 10px;
+    }
+    .ui-datepicker-prev{
+      float: left;
+    }
+    .ui-datepicker-next{
+      float: right;
+    }
+    .ui-datepicker-title{
+      text-align: center;
+    }
+  }
+}
+.gform_validation_container, .gform_wrapper .gform_validation_container, body .gform_wrapper li.gform_validation_container, body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container, body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
+    display: none !important;
+    position: absolute !important;
+    left: -9000px;
+}
+.gform_wrapper .gfield_visibility_hidden,
+.gform_wrapper .gf_invisible {
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+}

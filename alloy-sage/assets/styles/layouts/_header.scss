@@ -1,0 +1,142 @@
+/* Slideout menu --------------*/
+.alloy-slide-nav {
+  position: fixed;
+  right: 0;
+  top:0;
+  z-index: 999999;
+  background-color: $brand-light;
+  box-shadow: rgba($brand-dark, 0) -3px 0px 30px;
+  height: 100vh;
+  padding: 45px;
+  transform: translateX(100%);
+  transition: transform;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  &.show {
+    transform: translateX(0);
+    box-shadow: rgba($brand-dark, 0.15) -3px 0px 30px;
+  }
+  li.menu-item {
+    max-width: 240px;
+    line-height: 1.4em;
+  }
+  a {
+    line-height: .6em;
+    // border-bottom: 2px solid;
+    // border-color: transparent;
+    &:hover,
+    &:focus {
+      color: $brand-dark;
+      // border-color: $brand-dark;
+      text-decoration: underline;
+    }
+  }
+  .alloy-logo {
+    display: none;
+  }
+  .social {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    a{
+      width: 40px;
+      height: 40px;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding: 5px;
+    }
+  }
+
+  #alloyMenuToggle,
+  #alloyMenuToggleMob {
+    background-color: $brand-primary;
+    padding: 10px;
+    position: absolute;
+    z-index: 99999999;
+    left: 0;
+    transform: translateX(-100%);
+    top: 120px;
+    width: 35px;
+    // padding: 25px;
+    // float: right;
+    box-sizing: content-box;
+
+    span {
+      display: block;
+      background-color: $brand-dark;
+      height: 6px;
+      margin-bottom: 5px;
+      width: 100%;
+      transition: transform;
+      transition-duration: .3s;
+      transition-timing-function: ease;
+      transform-origin: top left;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &.show {
+      span {
+        &:first-child {
+          transform: rotate(45deg)translate(1px);
+        }
+        &:last-child {
+          transform: rotate(-45deg) translate(-4px);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  #alloyMenuToggleMob{
+    right: 20px;
+    top: 20px;
+    left: auto;
+    transform: translateX(0);
+    background: none;
+
+    span{
+      background-color: $brand-dark;
+    }
+  }
+
+  @media (max-width : 450px) {
+    #alloyMenuToggle{
+      top: 40px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* Scroll to top button --------------*/
+.scrollToTop {
+	width: 36px;
+	height: 36px;
+	padding: 8px;
+	text-align: center;
+	font-weight: bold;
+	position: fixed;
+	bottom: 60px;
+	left: 20px;
+	z-index: 99999;
+  border-bottom: 0;
+  opacity: 0;
+  transition: opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  background-color: $brand-primary;
+
+  &.visible{
+    opacity: 1;
+  }
+}

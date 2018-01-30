@@ -1,0 +1,59 @@
+#alloy-cookies-container {
+  background-color: #fff;
+  padding: 15px;
+  font-size: 12px;
+  line-height: 1.4em;
+  font-family: sans-serif;
+  hyphens: auto;
+  position: fixed;
+  z-index: 9000;
+
+  max-width: 100%;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 5px 0 rgba($brand-dark, .2);
+
+  // Animation CSS
+  transform: translateY(150%);
+  transition: transform;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
+  color: #777;
+
+  button {
+    display: inline!important;
+    background-color: #777;
+    border: 0;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1em;
+    margin-left: 5px;
+    width: auto !important;
+    min-width: inherit !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    padding: 5px 10px !important;
+    margin: 0 !important;
+
+    span {
+      margin-right: 3px;
+      color: #fff;
+    }
+  }
+
+  a {
+    font-size: inherit;
+    text-decoration: underline;
+    color: inherit;
+  }
+  &.show {
+    transform: translateY(0);
+  }
+}
+@media (min-width: 500px) {
+  #alloy-cookies-container {
+    max-width: 320px;
+    right: 45px;
+
+  }
+}
